@@ -7,17 +7,24 @@ var generateBtn = document.querySelector("#generate");
 // 3. Select which type of charactes to include
 // 4. Validate each input
 // 5. Display password
+var validPassLeng=false;
+
 function generatePassword() {
   alert("your password must be between 8 and 128 characters");
 alert("uppercase, lowercase, numbers, special characters");
 var passwordLength = prompt("Please enter your password length");
+while(validPassLeng=false){
 if (passwordLength<8|| passwordLength>128){
   alert("password must be between 8 and 128 characters");
    prompt("Please enter your password length");
 }else
+if (passwordLength>=8|| passwordLength<=128){
+  validPassLeng=true;
+}
   var newpass ="test";
   return newpass;
 }
+};
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
