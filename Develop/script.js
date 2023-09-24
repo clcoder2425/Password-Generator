@@ -11,7 +11,10 @@ function generatePassword() {
   alert("your password must be between 8 and 128 characters");
 alert("uppercase, lowercase, numbers, special characters");
 var passwordLength = prompt("Please enter your password length");
-
+if (passwordLength<8|| passwordLength>128){
+  alert("password must be between 8 and 128 characters");
+   prompt("Please enter your password length");
+}else
   var newpass ="test";
   return newpass;
 }
