@@ -8,7 +8,8 @@ var generateBtn = document.querySelector("#generate");
 // 4. Validate each input
 // 5. Display password
 function generatePassword() {
-  
+  alert("your password must be between 8 and 128 characters");
+alert("uppercase, lowercase, numbers, special characters");
   var newpass ="test";
   return newpass;
 }
