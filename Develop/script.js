@@ -10,6 +10,8 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword() {
   alert("your password must be between 8 and 128 characters");
 alert("uppercase, lowercase, numbers, special characters");
+var passwordLength = prompt("Please enter your password length");
+
   var newpass ="test";
   return newpass;
 }
