@@ -1,4 +1,14 @@
 // Assignment Code
+
+//define steps:
+// 1. Prompt user for password criteria:
+//    a. Password length between 8 and 128 characters
+//    b. Password may include uppercase, lowerCase, numeric and special characters.
+// 2. Select password length
+// 3. Select which type of charactes to include
+// 4. Validate each input
+// 5. Display password
+
 //Variables declaration
 var passwordLength= 8;
 var selectionarr =[];
@@ -8,58 +18,58 @@ var specialChararr = ['@','#','$','%','&','!','(',')','?','*','^',];
 var numbersarr = ['0','1','2','3','4','5','6','7','8','0'];
 
 var generateBtn = document.querySelector("#generate");
-// 1. Prompt user for password criteria:
-//    a. Password length between 8 and 128 characters
-//    b. Password may include uppercase, lowerCase, numeric and special characters.
-// 2. Select password length
-// 3. Select which type of charactes to include
-// 4. Validate each input
-// 5. Display password
-
-// define generatepassword function
-function generatePassword() {
-  //notify user of password criteria
-alert("Password must be between 8 and 128 characters");
-alert("May contain uppercase, lowercase, numbers and special characters");
-//Confirm password length
-var passwordLength = prompt("How many characters would you like for your password");
-
-if (passwordLength<8|| passwordLength>128){
-  alert("password must be between 8 and 128 characters");
-  return "incorrect length"
-  // prompt("Please enter your password length");
-}else if (passwordLength>=8|| passwordLength<=128){
-console.log(passwordLength);
-alert("you have chosen a valid length");
-}
-//prompt user to choose password characters
-var upCase= prompt("would you like to include uppercase? ");
-if (upCase==="yes"){
-  upCase=[A,B,C,D,E,F,G,HIJKLMNOPQRSTUVWXYZ]
-  var lowerCase= prompt("would you like to include lowercase");
-  if (lowerCase==="yes"){
-    var specialchar=prompt("Would like to include special characters?");
-    if(specialchar==="yes"){
-      var numbers=prompt("Would like to include numbers?");
-      if(numbers==="yes"){
-
-      }
-    }
-  }
-}
-  var newpass ="test";
-  return newpass;
-}
-
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+// Write password to the #password input
+function writePassword() {
+    var correctinput = getuserinput(); //This should return true or false
+    var passwordText = document.querySelector("#password");
+if (correctinput){
+var newpassword = generatePassword();
+  passwordText.value = newpassword;
+} else{
+    passwordText.value = "";
+}
+
+}
+
+// define generatepassword function
+
+
+function generatePassword() {
+  //would generate a password based on user input
+var password= "";
+var i = passwordLength;
+while(i>0){
+    var randomCharacter = Math.floor(Math.random()*selectionarr.length);
+    password = password + selectionarr[randomCharacter];
+    i--;
+}
+  
+  return password;
+}
+//Prompt user for password length
+function getuserinput(){
+    selectionarr = [];
+    passwordLength = parseInt(prompt("How many characters would you like in your password? (8-128)"))
+    if (isNaN(passwordLength) || passwordLength<8|| passwordLength>128){ //Verify that user has enter a number
+        alert("password must be between 8 and 128 characters, please try again");
+        return false;
+       
+}
+//Confirm which characters user would like in the password
+if (confirm("Would you like uppercase letters in your password?")){
+    selectionarr = selectionarr.concat(upCasearr);
+}
+if (confirm("Would you like lowercase letters in your password?")){
+    selectionarr = selectionarr.concat(lowerCasearr);
+}
+if (confirm("Would you like special characters in your password?")){
+    selectionarr = selectionarr.concat(specialChararr);
+}
+if (confirm("Would you like numbers in your password?")){
+    selectionarr = selectionarr.concat(numbersarr);
+}
+return true;
+}
