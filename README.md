@@ -29,8 +29,8 @@ To use this application:
 - If not chacters are selected, application display "No Character has been selected, please try again".
 
     
-   - ![Password Generator application screenshot](./Assets/Images/screenshootpass.JPG)
-   
+   - ![Password Generator application screenshot](./Assets/Images/screenshootpass.JPG).
+
 
    - [github repository access link](https://github.com/clcoder2425/Password-Generator.git)
    - [Password application link](https://clcoder2425.github.io/Password-Generator/)
