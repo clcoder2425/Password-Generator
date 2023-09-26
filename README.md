@@ -32,11 +32,11 @@ To use this application:
 
 
 
-    ```md
+    
    - ![Password Generator application screenshot](./Assets/Images/screenshootpass.JPG)
    - ![github repository access link](https://github.com/clcoder2425/Password-Generator.git)
    -![password generator live access link](https://github.com/clcoder2425/Password-Generator.git)
-    ```
+    
 
 ## Credits
 
