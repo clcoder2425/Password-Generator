@@ -28,16 +28,12 @@ To use this application:
 - Choose which password criteria would you like to include in your password by clicking "ok" for yes or "cancel" for no.
 - If not chacters are selected, application display "No Character has been selected, please try again".
 
-
-
-
-
     
    - ![Password Generator application screenshot](./Assets/Images/screenshootpass.JPG)
 
-   - ![github repository access link](https://github.com/clcoder2425/Password-Generator.git)
-   
-   -![password generator live access link](https://github.com/clcoder2425/Password-Generator.git)
+   - [github repository access link](https://github.com/clcoder2425/Password-Generator.git)
+
+   -[password generator live access link](https://github.com/clcoder2425/Password-Generator.git)
     
 
 ## Credits
