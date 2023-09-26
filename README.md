@@ -33,7 +33,7 @@ To use this application:
 
    - [github repository access link](https://github.com/clcoder2425/Password-Generator.git)
 
-   -[password generator live access link](https://github.com/clcoder2425/Password-Generator.git)
+   - [password generator live access link](https://clcoder2425.github.io/Password-Generator/)
     
 
 ## Credits
