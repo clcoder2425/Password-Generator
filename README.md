@@ -26,7 +26,7 @@ To use this application:
 - Click the red button "Generate Password".
 - Answer window prompt with the length of the password and click "ok".
 - Choose which password criteria would you like to include in your password by clicking "ok" for yes or "cancel" for no.
-- If not chacters are selected, application will report "undifined", still working on it.
+- If not chacters are selected, application display "No Character has been selected, please try again".
 
 
 
