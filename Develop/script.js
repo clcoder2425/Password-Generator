@@ -72,4 +72,5 @@ if (confirm("Would you like numbers in your password?")){
     selectionarr = selectionarr.concat(numbersarr);
 }
 return true;
+
 }
