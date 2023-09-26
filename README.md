@@ -39,8 +39,8 @@ To use this application:
 ## Credits
 
 Tutorials used:
-- ![W3School confirm method](https://www.w3schools.com/jsref/met_win_confirm.asp)
-- ![W3School prompt method](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_prompt)
+- [W3School confirm method](https://www.w3schools.com/jsref/met_win_confirm.asp)
+- [W3School prompt method](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_prompt)
 - [W3School alert method](https://www.w3schools.com/jsref/met_win_alert.asp)
 - [W3School how to generate a random character](https://www.w3schools.com/js/js_random.asp)
 
