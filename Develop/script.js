@@ -7,7 +7,9 @@
 // 2. Select password length
 // 3. Select which type of charactes to include
 // 4. Validate each input
-// 5. Display password
+// 5. Validate user has chosen at list one character type
+// 6. Generate password
+// 7. Display password
 
 //Variables declaration
 var passwordLength= 8;
@@ -16,6 +18,7 @@ var upCasearr =['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P',
 var lowerCasearr = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 var specialChararr = ['@','#','$','%','&','!','(',')','?','*','^',];
 var numbersarr = ['0','1','2','3','4','5','6','7','8','0'];
+var noCharacter ="No character has been selected, please try again"
 
 var generateBtn = document.querySelector("#generate");
 
@@ -40,14 +43,18 @@ var newpassword = generatePassword();
 function generatePassword() {
   //would generate a password based on user input
 var password= "";
-var i = passwordLength;
+if (selectionarr !=""){
+  var i = passwordLength;
 while(i>0){
     var randomCharacter = Math.floor(Math.random()*selectionarr.length);
     password = password + selectionarr[randomCharacter];
     i--;
 }
-  
+return password;
+//This validate that user has chosen at least one character type
+} else password = password + noCharacter;
   return password;
+  
 }
 //Prompt user for password length
 function getuserinput(){
@@ -70,7 +77,7 @@ if (confirm("Would you like special characters in your password?")){
 }
 if (confirm("Would you like numbers in your password?")){
     selectionarr = selectionarr.concat(numbersarr);
-}
+}else alert("No character has been selected, please try again")
 return true;
 
 }
